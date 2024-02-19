@@ -1,7 +1,7 @@
-const { model, Schema } = require("mongoose");
+import mongoose from "mongoose"
 
-const Dealer = new Schema({
+const Dealer = new mongoose.Schema({
   dealer: { type: String, required: true, unique: true },
-});
+})
 
-module.exports = model("Dealer", Dealer);
+export default mongoose.model("Dealer", Dealer)
