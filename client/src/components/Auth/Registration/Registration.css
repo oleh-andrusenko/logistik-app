@@ -1,0 +1,50 @@
+.registration {
+  width: 700px;
+  height: 300px;
+  border-radius: 15px;
+  background-color: var(--primary-color);
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.registration__header {
+  padding: 10px 0;
+  color: #fff;
+  text-align: center;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.registration__submit {
+  width: 400px;
+  padding: 5px;
+  border: none;
+  height: 40px;
+  color: var(--primary-color);
+  border-radius: 10px;
+  background-color: #fff;
+  transition: 0.2s all ease;
+}
+.registration__submit:hover {
+  cursor: pointer;
+  transition: 0.2s all ease;
+  font-weight: bold;
+  box-shadow: 2px 2px 1px #fff;
+}
+.level__selector {
+  width: 400px;
+  height: 40px;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--primary-color);
+  margin: 10px 0;
+  padding: 5px;
+}

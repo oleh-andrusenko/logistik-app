@@ -1,0 +1,32 @@
+.print__container {
+  width: 1100px;
+  margin: 0 auto;
+}
+.print__container_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 32px;
+}
+.print__container_logo img {
+  width: 250px;
+  height: 80px;
+  margin-right: 25px;
+}
+.print__container_table {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.print__container_table tr, .print__container_table td, .print__container_table th, .print__container_table table {
+  border-bottom: 1px solid black;
+}
+.print__container_table table {
+  border-collapse: collapse;
+}
+.print__container_table tr, .print__container_table td, .print__container_table th {
+  height: 30px;
+  text-align: center;
+  padding: 16px;
+}/*# sourceMappingURL=PrintToWarehouse.css.map */

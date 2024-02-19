@@ -1,0 +1,25 @@
+.clock {
+  width: 250px;
+  display: flex;
+  background: var(--primary-color);
+  flex-direction: column;
+  padding: 3rem;
+  justify-content: center;
+  color: white;
+  border-radius: 0 0 0 64px;
+  height: 100%;
+}
+.clock__time {
+  width: 40%;
+  font-size: 36px;
+  margin: 0;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.clock__date {
+  width: 30%;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}/*# sourceMappingURL=Clock.css.map */

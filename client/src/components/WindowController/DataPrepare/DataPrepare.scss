@@ -1,0 +1,156 @@
+.prepare-data {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 16px;
+    height: 150px;
+  }
+  &__button,
+  &__viewbutton,
+  &__clear {
+    width: 300px;
+    height: 40px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background 0.4s ease;
+    color: white;
+    margin-bottom: 8px;
+  }
+  &__button {
+    background: dodgerblue;
+    border: 2px solid dodgerblue;
+  }
+
+  &__button:hover {
+    cursor: pointer;
+    font-weight: bold;
+    background: white;
+    color: dodgerblue;
+    transition: background 0.4s ease;
+  }
+
+  &__viewbutton {
+    background-color: orange;
+    border: 2px solid orange;
+  }
+  &__viewbutton:hover {
+    cursor: pointer;
+    background: white;
+    color: orange;
+    transition: background 0.4s ease;
+    font-weight: bold;
+  }
+  &__viewbutton:disabled,
+  &__clear:disabled {
+    color: gray;
+    border: 2px solid gray;
+    background: white;
+  }
+  &__viewbutton:disabled:hover,
+  &__clear:disabled:hover {
+    font-weight: normal;
+    color: gray;
+    border: 2px solid gray;
+    background: white;
+    cursor: not-allowed;
+  }
+
+  &__clear {
+    background: darkred;
+    border: 2px solid darkred;
+  }
+  &__clear:hover {
+    cursor: pointer;
+    color: darkred;
+    background: white;
+    font-weight: bold;
+  }
+  &__guide {
+    width: 400px;
+    font-size: 14px;
+    font-weight: bold;
+    li {
+      font-weight: normal;
+      margin: 5px 0;
+    }
+  }
+  &__info {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: green;
+    color: white;
+    border-radius: 16px;
+    font-size: 14px;
+  }
+  &__empty {
+    font-size: 30px;
+    text-align: center;
+    margin: 30% 20px;
+  }
+  &__preview {
+    width: 600px;
+    height: 500px;
+    overflow: auto;
+    position: relative;
+    border: 1px dashed gray;
+    table,
+    tr,
+    td,
+    th {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 8px;
+      font-size: 12px;
+    }
+    th {
+      background: dodgerblue;
+      color: white;
+      font-weight: normal;
+    }
+    tr {
+      height: 24px;
+    }
+    table {
+      width: 100%;
+      position: relative;
+    }
+    td:first-child {
+      width: 50px;
+      text-align: center;
+      font-weight: bold;
+      background: rgba(30, 144, 255, 0.25);
+    }
+    td:nth-child(2),
+    td:nth-child(3) {
+      width: 120px;
+      text-align: center;
+    }
+
+    td:nth-child(4) {
+      width: 12ch;
+      text-align: center;
+    }
+    td:nth-child(5) {
+      text-align: center;
+    }
+    thead {
+      position: sticky;
+      top: -1px;
+    }
+  }
+}

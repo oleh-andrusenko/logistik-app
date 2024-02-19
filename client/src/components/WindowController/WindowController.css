@@ -1,0 +1,16 @@
+.window-controller {
+  transition: 0.4s;
+}
+.window-controller__title h3 {
+  font-size: 32px;
+  text-align: center;
+  margin: 25px auto;
+}
+.window-controller__tabs {
+  width: 100%;
+  border-bottom: 2px solid dodgerblue;
+  transition: 0.4s;
+}
+.window-controller__content {
+  padding: 30px 20px;
+}/*# sourceMappingURL=WindowController.css.map */

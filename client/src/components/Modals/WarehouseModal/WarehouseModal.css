@@ -1,0 +1,81 @@
+.warehouse__modal {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 6;
+  transform: scale(0);
+}
+
+.warehouse__modal.active {
+  transform: scale(1);
+  z-index: 7;
+}
+.warehouse__modal_content {
+  padding: 40px;
+  border-radius: 12px;
+  width: 500px;
+  background: white;
+  transition: 0.4s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.warehouse__modal_content h3 {
+  text-align: center;
+}
+
+.warehouse__modal_content label {
+  margin: 4px 0;
+}
+
+.warehouse__modal_content input,
+.warehouse__modal_content select {
+  margin-bottom: 4px;
+  height: 30px;
+}
+.modal__add {
+  width: 100%;
+  height: 35px;
+  background: #758e4f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+.modal__add:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal__close {
+  width: 25px;
+  height: 25px;
+  color: darkred;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  border-radius: 8px;
+}
+.modal__close:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.warehouse__modal_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.warehouse__modal_total {
+  font-size: 12px;
+  margin: 0;
+  color: #646464;
+}

@@ -1,0 +1,76 @@
+.dealers {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.dealers__header {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(7, 73, 120);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dealers__info {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dealers__addform {
+  width: 400px;
+  padding: 20px 0;
+  animation: width-anim 1s ease;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dealers_input {
+  transition: 0.2s ease;
+
+  width: 300px;
+  height: 30px;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid lightgray;
+  outline: none;
+}
+.dealers_input:focus {
+  transition: 0.2s ease;
+  border-bottom: 1px solid black;
+}
+
+.close-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: red;
+  color: white;
+  transition: 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-btn:hover {
+  font-weight: bold;
+  background-color: darkred;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+@keyframes width-anim {
+  0% {
+    margin-right: -340px;
+  }
+
+  100% {
+    margin-right: 0;
+  }
+}

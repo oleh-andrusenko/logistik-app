@@ -1,0 +1,53 @@
+.outwarehouse__container {
+  width: 100%;
+}
+.outwarehouse__settings {
+  height: 120px;
+  background: salmon;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.outwarehouse__settings_range input {
+  width: 80px;
+  height: 30px;
+  margin-left: 16px;
+}
+.outwarehouse__settings_total {
+  font-size: 18px;
+  font-weight: bold;
+}
+.outwarehouse__settings_buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.outwarehouse__settings_buttons button {
+  width: 100px;
+  height: 30px;
+}
+.outwarehouse__results {
+  margin-top: 16px;
+  height: 350px;
+  overflow: auto;
+  background: lightblue;
+}
+.outwarehouse__results_cells {
+  display: flex;
+  transition: 0.4s ease;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.outwarehouse__results_cells div {
+  flex: 0 1 6ch;
+  width: 8ch;
+  height: 3ch;
+  background: dodgerblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  color: white;
+  transition: 0.4s ease;
+}/*# sourceMappingURL=OutWarehouse.css.map */

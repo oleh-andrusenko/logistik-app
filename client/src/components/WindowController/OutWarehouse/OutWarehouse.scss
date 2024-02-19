@@ -1,0 +1,59 @@
+.outwarehouse {
+  &__container {
+    width: 100%;
+  }
+  &__settings {
+    height: 120px;
+    background: salmon;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &_range {
+      input {
+        width: 80px;
+        height: 30px;
+        margin-left: 16px;
+      }
+    }
+    &_total{
+        font-size: 18px;
+        font-weight: bold;
+    }
+    &_buttons {
+     
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      button {
+        width: 100px;
+        height: 30px;
+      }
+    }
+  }
+  &__results {
+    margin-top: 16px;
+    height: 350px;
+    overflow: auto;
+    background: lightblue;
+    &_cells {
+      display: flex;
+      transition: 0.4s ease;
+
+      gap: 4px;
+      flex-wrap: wrap;
+      div {
+        flex: 0 1 6ch;
+        width: 8ch;
+        height: 3ch;
+        background: dodgerblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        color: white;
+        transition: 0.4s ease;
+      }
+    }
+  }
+}

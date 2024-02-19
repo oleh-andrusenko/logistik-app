@@ -1,0 +1,87 @@
+.warehouse-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.warehouse__table {
+  margin-top: 50px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 990px;
+}
+.warehouse__table td,
+.warehouse__table tr,
+.warehouse__table th {
+  border: 1px solid black;
+  text-align: center;
+}
+.warehouse__table tr {
+  height: 40px;
+}
+.warehouse__table th {
+  background: dodgerblue;
+}
+
+.warehouse__update {
+  width: 200px;
+  height: 40px;
+  border: none;
+  background: #568259;
+  color: white;
+  border-radius: 8px;
+}
+
+.warehouse__update:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.warehouse__add {
+  width: 200px;
+  height: 40px;
+  margin-left: 16px;
+  background: #33658a;
+  color: white;
+  border-radius: 8px;
+  border: none;
+}
+
+.warehouse__add:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.warehouse__buttons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.warehouse__controls {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.warehouse__count {
+  width: 200px;
+}
+
+.warehouse__noitems {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 32px;
+  margin-top: 50px;
+}
+
+.warehouse__noitems img {
+  width: 256px;
+  height: 256px;
+}/*# sourceMappingURL=WarehousesList.css.map */

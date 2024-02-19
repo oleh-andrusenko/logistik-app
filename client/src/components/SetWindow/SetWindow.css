@@ -1,0 +1,25 @@
+.setform {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+.setform select,
+.setform input {
+  height: 30px;
+  margin: 5px 0;
+}
+.setform button {
+  height: 30px;
+  width: 100%;
+  background: lightgreen;
+  color: green;
+  border: none;
+  border-radius: 4px;
+  transition: 0.4s;
+}
+.setform button:hover {
+  cursor: pointer;
+  font-weight: bold;
+  border: 1px solid green;
+  transition: 0.4s;
+}/*# sourceMappingURL=SetWindow.css.map */

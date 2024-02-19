@@ -1,0 +1,21 @@
+.dashboard {
+  &__header {
+    height: 125px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 12px;
+    h3 {
+      font-size: 36px;
+      color: var(--primary-color);
+      margin: 0;
+      margin-left: 3rem;
+    }
+  }
+
+  &__content {
+    padding: 1rem;
+    display: flex;
+    gap: 8px;
+  }
+}

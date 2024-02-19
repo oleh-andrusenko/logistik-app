@@ -1,0 +1,17 @@
+.setter h3 {
+  text-align: center;
+}
+.setter__container {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 20px;
+}
+.setter__settings {
+  display: flex;
+  flex-direction: column;
+}
+.setter__settings button, .setter__settings select {
+  height: 30px;
+  width: 100%;
+  margin: 5px 0;
+}/*# sourceMappingURL=WindowSetter.css.map */

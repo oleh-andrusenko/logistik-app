@@ -1,0 +1,77 @@
+.userlist {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 200px;
+}
+
+.userlist__title {
+  margin: 50px 0;
+  padding: 0;
+}
+.userlist__control {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.userlist__control_add {
+  margin-left: 75px;
+  height: 30px;
+  width: 100px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: lightseagreen;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  transition: .4s;
+
+}
+.userlist__control_add:hover{
+background: green;
+transition: .4s;
+}
+
+.userlist__table {
+  width: 100%;
+  margin: 25px 0 50px 0;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+.userlist__table th,
+.userlist__table td,
+.userlist__table tr {
+  border: 1px solid black;
+  height: 30px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.userlist__table th{
+  background: lightskyblue;
+  
+}
+
+
+.userlist__table tr:hover{
+  background: lightgray;
+  cursor:default;
+ 
+}
+
+.userlist__table td:last-child:hover{
+  cursor: pointer;
+  transform: scale(1.25);
+  transition: .3s;
+
+}
+
+
+

@@ -1,0 +1,18 @@
+.widgets {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 40px;
+}
+.widgets img{
+    margin-top: 50px;
+    width: 400px;
+    height: 300px;
+    transition: 0.5s;
+}
+
+.widgets img:hover{
+    transform: scale(1.5);
+    transition: 0.5s;
+}

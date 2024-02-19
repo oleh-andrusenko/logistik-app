@@ -1,0 +1,13 @@
+.server-check__indicator {
+  margin-left: 1rem;
+  border-radius: 50%;
+}
+.server-check__indicator i {
+  font-size: 24px;
+}
+.server-check__indicator i.green-text {
+  color: #06d6a0;
+}
+.server-check__indicator i.red-text {
+  color: #a52422;
+}/*# sourceMappingURL=ServerCheck.css.map */

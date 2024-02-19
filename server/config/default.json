@@ -1,0 +1,5 @@
+{
+    "serverPort": 5000,
+    "mongoURL": "mongodb+srv://logistik-admin:IP7CMn4gOGBbk3z0@logistikcluster.eje5ues.mongodb.net/logistikdb",
+    "secretKey": "sdkfhjsdhkfjhsdli"
+}

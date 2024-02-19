@@ -1,0 +1,29 @@
+.logs {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.logs__header {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: rgba(7, 73, 120);
+}
+.center {
+  text-align: center;
+}
+
+.loader {
+  margin: 0 auto;
+  margin-top: 25%;
+}
+.logs__count {
+  margin-bottom: 5px;
+}
+
+
+
+

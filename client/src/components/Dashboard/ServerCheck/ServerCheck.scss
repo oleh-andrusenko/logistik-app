@@ -1,0 +1,15 @@
+.server-check {
+  &__indicator {
+    margin-left: 1rem;
+    border-radius: 50%;
+    i {
+      font-size: 24px;
+    }
+    i.green-text {
+      color: #06d6a0;
+    }
+    i.red-text {
+      color: #a52422;
+    }
+  }
+}
