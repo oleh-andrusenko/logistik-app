@@ -21,7 +21,7 @@ class DealerService {
   }
   async update(dealer) {
     try {
-      if (!id) throw new Error("ID is undefined")
+      if (!dealer._id) throw new Error("ID is undefined")
 
       const updatedDealer = await Dealer.findByIdAndUpdate(dealer._id, dealer, {
         new: true,

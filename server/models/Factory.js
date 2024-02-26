@@ -1,7 +1,7 @@
-const { model, Schema } = require("mongoose");
+import { model, Schema } from "mongoose"
 
 const Factory = new Schema({
   factory: { type: String, required: true, unique: true },
-});
+})
 
-module.exports = model("Factory", Factory);
+export default model("Factory", Factory)

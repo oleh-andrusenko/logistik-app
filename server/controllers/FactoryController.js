@@ -1,10 +1,10 @@
-import DealerService from "../services/DealerService.js"
+import FactoryService from "../services/FactoryService.js"
 
-class DealerController {
+class FactoryController {
   async create(req, res) {
     try {
-      const newDealer = await DealerService.create(req.body)
-      return res.status(201).json(newDealer)
+      const newFactory = await FactoryService.create(req.body)
+      return res.status(201).json(newFactory)
     } catch (error) {
       console.error(error)
       res.status(500).json(error.message)
@@ -12,8 +12,8 @@ class DealerController {
   }
   async getAll(req, res) {
     try {
-      const dealers = await DealerService.getAll()
-      return res.json(dealers)
+      const factorys = await FactoryService.getAll()
+      return res.json(factorys)
     } catch (error) {
       console.error(error)
       res.status(500).json(error.message)
@@ -21,8 +21,8 @@ class DealerController {
   }
   async getOne(req, res) {
     try {
-      const dealer = await DealerService.getOne(req.params.id)
-      return res.json(dealer)
+      const factory = await FactoryService.getOne(req.params.id)
+      return res.json(factory)
     } catch (error) {
       console.error(error)
       res.status(500).json(error.message)
@@ -30,8 +30,8 @@ class DealerController {
   }
   async update(req, res) {
     try {
-      const updatedDealer = await DealerService.update(req.body)
-      return res.json(updatedDealer)
+      const updatedFactory = await FactoryService.update(req.body)
+      return res.json(updatedFactory)
     } catch (error) {
       console.error(error)
       res.status(500).json(error.message)
@@ -39,8 +39,8 @@ class DealerController {
   }
   async delete(req, res) {
     try {
-      const deletedDealer = await DealerService.delete(req.params.id)
-      return res.json(deletedDealer)
+      const deletedFactory = await FactoryService.delete(req.params.id)
+      return res.json(deletedFactory)
     } catch (error) {
       console.error(error)
       res.status(500).json(error.message)
@@ -48,4 +48,4 @@ class DealerController {
   }
 }
 
-export default new DealerController()
+export default new FactoryController()

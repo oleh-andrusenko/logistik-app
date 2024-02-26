@@ -1,7 +1,7 @@
-const { model, Schema } = require("mongoose");
+import { model, Schema } from "mongoose"
 
 const Direction = new Schema({
   direction: { type: String, required: true, unique: true },
-});
+})
 
-module.exports = model("Direction", Direction);
+export default model("Direction", Direction)

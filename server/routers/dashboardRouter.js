@@ -1,31 +1,11 @@
-const Router = require("express")
-const router = new Router()
-const Warehouse = require("../models/Warehouse")
-const Dealer = require("../models/Dealer")
-const User = require("../models/User")
-const Window = require("../models/Window")
-const Direction = require("../models/Direction")
-const Factory = require("../models/Factory")
-router.get("/counts", async (req, res) => {
-  return res.json({
-    warehouses: await Warehouse.countDocuments(),
-    dealers: await Dealer.countDocuments(),
-    users: await User.countDocuments(),
-    windows: await Window.countDocuments(),
-    directions: await Direction.countDocuments(),
-    factories: await Factory.countDocuments(),
-  })
-})
+import DashboardController from "../controllers/DashboardController.js"
+import Router from "express"
 
-router.get("/healthCheck", async (req, res) => {
-  try {
-    return res.json({
-      code: 200,
-      message: "OK",
-    })
-  } catch (e) {
-    console.error(e)
-  }
-})
+const dashboardRouter = new Router()
 
-module.exports = router
+
+dashboardRouter.get("/counts", DashboardController.getCounts)
+dashboardRouter.get("/health", DashboardController.healthCheck)
+
+
+export default dashboardRouter

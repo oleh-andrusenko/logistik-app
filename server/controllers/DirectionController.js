@@ -1,10 +1,10 @@
-import DealerService from "../services/DealerService.js"
+import DirectionService from "../services/DirectionService.js"
 
-class DealerController {
+class DirectionController {
   async create(req, res) {
     try {
-      const newDealer = await DealerService.create(req.body)
-      return res.status(201).json(newDealer)
+      const newDirection = await DirectionService.create(req.body)
+      return res.status(201).json(newDirection)
     } catch (error) {
       console.error(error)
       res.status(500).json(error.message)
@@ -12,8 +12,8 @@ class DealerController {
   }
   async getAll(req, res) {
     try {
-      const dealers = await DealerService.getAll()
-      return res.json(dealers)
+      const directions = await DirectionService.getAll()
+      return res.json(directions)
     } catch (error) {
       console.error(error)
       res.status(500).json(error.message)
@@ -21,8 +21,8 @@ class DealerController {
   }
   async getOne(req, res) {
     try {
-      const dealer = await DealerService.getOne(req.params.id)
-      return res.json(dealer)
+      const direction = await DirectionService.getOne(req.params.id)
+      return res.json(direction)
     } catch (error) {
       console.error(error)
       res.status(500).json(error.message)
@@ -30,8 +30,8 @@ class DealerController {
   }
   async update(req, res) {
     try {
-      const updatedDealer = await DealerService.update(req.body)
-      return res.json(updatedDealer)
+      const updatedDirection = await DirectionService.update(req.body)
+      return res.json(updatedDirection)
     } catch (error) {
       console.error(error)
       res.status(500).json(error.message)
@@ -39,8 +39,8 @@ class DealerController {
   }
   async delete(req, res) {
     try {
-      const deletedDealer = await DealerService.delete(req.params.id)
-      return res.json(deletedDealer)
+      const deletedDirection = await DirectionService.delete(req.params.id)
+      return res.json(deletedDirection)
     } catch (error) {
       console.error(error)
       res.status(500).json(error.message)
@@ -48,4 +48,4 @@ class DealerController {
   }
 }
 
-export default new DealerController()
+export default new DirectionController()

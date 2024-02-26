@@ -1,8 +1,8 @@
-const { Schema, model, ObjectId } = require("mongoose")
+import { Schema, model, ObjectId } from "mongoose"
 
 const WindowsSet = new Schema({
   warehouse: { type: String },
   windows: { type: Array },
 })
 
-module.exports = model("WindowsSet", WindowsSet)
+export default model("WindowsSet", WindowsSet)
