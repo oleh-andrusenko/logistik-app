@@ -1,4 +1,4 @@
-const { Schema, model, ObjectId } = require("mongoose")
+import { Schema, model, ObjectId } from "mongoose"
 
 const Window = new Schema({
   number: { type: Number, required: true },
@@ -13,4 +13,4 @@ const Window = new Schema({
   description: { type: String },
 })
 
-module.exports = model("Window", Window)
+export default model("Window", Window)
