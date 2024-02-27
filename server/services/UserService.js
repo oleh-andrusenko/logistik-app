@@ -1,6 +1,9 @@
 import User from "../models/User.js"
 import bcrypt from "bcryptjs"
 import jwt from "jsonwebtoken"
+import config from "config"
+import { ObjectId } from "mongodb"
+
 class UserService {
   async create(data) {
     const { username, password, level } = data

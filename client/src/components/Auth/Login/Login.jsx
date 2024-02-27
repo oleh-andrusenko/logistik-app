@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react"
 import Input from "../Input/Input"
 import { login } from "../../../actions/user"
-import { logEvent } from "../../../actions/log"
 import { AuthContext } from "../../App"
 import { useNavigate } from "react-router-dom"
 import "./Login.css"
@@ -44,11 +43,7 @@ function Login() {
               level: res.user.privilege_level,
               isAuthenticated: true,
             })
-            await logEvent(
-              "AUTH",
-              2,
-              `User ${username} successfully logged in.`
-            )
+
             navigator("/")
             toast.success("Авторизація успішна!", {
               position: "top-center",
@@ -71,7 +66,6 @@ function Login() {
               progress: undefined,
               theme: "light",
             })
-          logEvent("AUTH", 2, `Invalid credentials for user: ${username}`)
         }}
       >
         Увійти

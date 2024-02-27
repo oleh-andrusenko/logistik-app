@@ -27,8 +27,9 @@ function App() {
     level: null,
     isAuthenticated: false,
   })
-  async function fetchData() {
-    const data = await auth()
+  async function fetchData(savedToken) {
+    const data = await auth(savedToken)
+    console.log(data)
     setUserState({
       token: data.token,
       username: data.user.username,
@@ -37,8 +38,9 @@ function App() {
     })
   }
   useEffect(() => {
-    if (localStorage.getItem("jwtToken") !== null) {
-      fetchData()
+    const storageToken = localStorage.getItem("jwtToken")
+    if (storageToken !== null) {
+      fetchData(storageToken)
     }
   }, [])
   return (

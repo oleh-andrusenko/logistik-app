@@ -28,7 +28,7 @@ class UserController {
   }
   async auth(req, res) {
     try {
-      const authResponse = await UserService.login(req.user)
+      const authResponse = await UserService.auth(req.user)
       return res.json(authResponse)
     } catch (error) {
       res.status(500).json(error.message)

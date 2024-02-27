@@ -84,12 +84,13 @@ function ToWarehouse() {
           onClick={async () => {
             setDoneWindows([])
             setProcessing(true)
-            const data = await autofillWindows({
+            const {data} = await autofillWindows({
               windows,
               warehouse: selectedWarehouse.warehouse,
             })
-            setDoneWindows(data.data.resultArray)
-            setPrintLink(data.data.id)
+            console.log(data)
+            setDoneWindows(data.resultArray)
+            setPrintLink(data.id)
             setProcessing(false)
             await loadData()
           }}
@@ -97,7 +98,7 @@ function ToWarehouse() {
           Поставити
         </button>
 
-        <button
+        {/* <button
           disabled={doneWindows.length !== 0 ? "" : "disabled"}
           onClick={() => {
             navigator(`/whcontroller/${printLink}`)
@@ -105,8 +106,7 @@ function ToWarehouse() {
           className={"autoset__settings_print"}
         >
           Друкувати папери на склад
-        </button>
-        
+        </button> */}
       </div>
       <div className='autoset__preview'>
         {processing && (

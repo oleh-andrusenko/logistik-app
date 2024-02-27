@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react"
 import "./WindowSetter.css"
-import {
-  clearWarehouse,
-  getAllWarehouses,
-  randomFill,
-} from "../../actions/warehouse"
+import { getAllWarehouses } from "../../actions/warehouse"
 import SetWindow from "../SetWindow/SetWindow"
 function WindowSetter() {
   const [loading, setLoading] = useState(true)
@@ -41,40 +37,7 @@ function WindowSetter() {
               )
             })}
           </select>
-          <button
-            disabled
-            // onClick={async () => {
-            //   try {
-            //     const clipboardData = await navigator.clipboard.readText()
-            //     const d = clipboardData.split("\\\\r\\\\n")
-            //     console.log(d)
-            //     let tmp = []
-            //     for (let i = 0; i < d.length; i++) {
-            //       tmp.push(JSON.parse(d[i]))
-            //     }
-            //     setWindows(tmp)
-            //   } catch (e) {
-            //     alert(e)
-            //   }
-            // }}
-          >
-            Взяти дані з буферу обміну
-          </button>
-          <button
-            onClick={async () => {
-              const res = await randomFill(selectedWarehouse.warehouse)
-              console.log(res)
-            }}
-          >
-            Заповнити
-          </button>
-          <button
-            onClick={async () => {
-              await clearWarehouse(selectedWarehouse.warehouse)
-            }}
-          >
-            Очистити
-          </button>
+          <button disabled>Взяти дані з буферу обміну</button>
         </div>
         <SetWindow />
       </div>

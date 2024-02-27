@@ -3,7 +3,7 @@ import axios from "axios"
 //Add user
 export const registration = async (login, password, level) => {
   try {
-    const response = await axios.post("http://localhost:5000/user/add", {
+    const response = await axios.post("http://localhost:5000/user/register", {
       username: login,
       password,
       level,
@@ -27,11 +27,11 @@ export const login = async (login, password) => {
   }
 }
 //Auth with token
-export const auth = async () => {
+export const auth = async (token) => {
   try {
     const response = await axios.get("http://localhost:5000/user/auth", {
       headers: {
-        Authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
+        "Authorization": `Bearer ${token}`,
         "access-control-allow-origin": "*",
         "Access-Control-Allow-Headers": "Content-Type, Authorization",
         "Access-Control-Allow-Methods": "*",
@@ -40,13 +40,13 @@ export const auth = async () => {
     localStorage.setItem("jwtToken", response.data.token)
     return response.data
   } catch (error) {
-    localStorage.removeItem("jwtToken")
+    console.log(error)
   }
 }
 //Get list of users
 export const getAllUsers = async () => {
   try {
-    const response = await axios.get("http://localhost:5000/user/all")
+    const response = await axios.get("http://localhost:5000/user/")
     return response.data.users
   } catch (error) {
     alert(error)

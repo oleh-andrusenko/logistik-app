@@ -32,23 +32,7 @@ export const deleteWarehouse = async (id) => {
   }
 }
 
-export const randomFill = async (warehouse) => {
-  try {
-    const result = await axios.post("http://localhost:5000/warehouse/random", {
-      warehouse,
-    })
-    return result
-  } catch (error) {}
-}
 
-export const clearWarehouse = async (warehouse) => {
-  try {
-    const result = await axios.post("http://localhost:5000/warehouse/clear", {
-      warehouse,
-    })
-    return result
-  } catch (error) {}
-}
 
 export const getWarehousesCapacity = async () => {
   try {

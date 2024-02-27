@@ -1,6 +1,6 @@
 import Warehouse from "../models/Warehouse.js"
 import Window from "../models/Window.js"
-
+import WindowsSet from "../models/WindowsSet.js"
 class WarehouseService {
   async putToCell(warehouse, window, pyramidNumber, cellNumber) {
     const newWindow = new Window({
@@ -95,11 +95,13 @@ class WarehouseService {
     })
     return capacities
   }
-  async autoFill({ windows, warehouse }) {
+  async autoFill(data) {
+    const { windows, warehouse } = data
+    console.log(data)
     let emptyCells = []
     let freeCells = []
     const findWarehouse = await Warehouse.findOne({
-      warehouse: req.body.warehouse,
+      warehouse: warehouse,
     })
     findWarehouse.pyramids.forEach((pyramid) => {
       freeCells = []
@@ -117,7 +119,7 @@ class WarehouseService {
         if (emptyCells[i].freeCells.length) {
           const tmpCell = emptyCells[i].freeCells.shift()
           resultArray.push(
-            await putToCell(
+            await this.putToCell(
               warehouse,
               windows[j],
               emptyCells[i].pyramid,

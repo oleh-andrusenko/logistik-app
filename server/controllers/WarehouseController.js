@@ -36,6 +36,7 @@ class WarehouseController {
   }
   async autoFill(req, res) {
     try {
+      
       const response = await WarehouseService.autoFill(req.body)
       return res.json(response)
     } catch (error) {
